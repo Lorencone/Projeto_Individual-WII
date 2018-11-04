@@ -10,3 +10,9 @@ include_once ('../escola/Escola.php');
 include_once ('../pagamento/Pagamento.php');
 //Conecta com o banco de dados de Responsavel
 include_once('../responsavel/Responsavel.php');
+//Conecta com o banco de dados de Perfil
+include_once ('../perfil/Perfil.php');
+//Conecta com o banco de dados de Pagina
+include_once ('../pagina/Pagina.php');
+//Conecta com o banco de dados de Usuario
+include_once ('../usuario/Usuario.php');
