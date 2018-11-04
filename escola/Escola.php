@@ -6,6 +6,7 @@ class Escola
     protected $nome;
     protected $cep;
     protected $logradouro;
+    protected $numero;
     protected $bairro;
     protected $localidade;
     protected $uf;
@@ -48,6 +49,16 @@ class Escola
     public function setLogradouro($logradouro)
     {
         $this->logradouro = $logradouro;
+    }
+
+    public function getNumero()
+    {
+        return $this->numero;
+    }
+
+    public function setNumero($numero)
+    {
+        $this->numero = $numero;
     }
 
     public function getBairro()
@@ -100,6 +111,7 @@ class Escola
         $this->nome = $dados[0]['nome'];
         $this->cep = $dados[0]['cep'];
         $this->logradouro = $dados[0]['logradouro'];
+        $this->numero = $dados[0]['numero'];
         $this->bairro = $dados[0]['bairro'];
         $this->localidade = $dados[0]['localidade'];
         $this->uf = $dados[0]['uf'];
@@ -111,14 +123,15 @@ class Escola
         $nome = $dados['nome'];
         $cep = $dados['cep'];
         $logradouro = $dados['logradouro'];
+        $numero = $dados['numero'];
         $bairro = $dados['bairro'];
         $localidade = $dados['localidade'];
         $uf = $dados['uf'];
 
         $conexao = new Conexao();
 
-        $sql = "insert into escola (nome, cep, logradouro, bairro, localidade, uf)
-                          values ('$nome','$cep','$logradouro','$bairro','$localidade','$uf')";
+        $sql = "insert into escola (nome, cep, logradouro, numero, bairro, localidade, uf)
+                          values ('$nome','$cep','$logradouro','$numero','$bairro','$localidade','$uf')";
 
         return $conexao->executar($sql);
     }
@@ -129,6 +142,7 @@ class Escola
         $nome = $dados['nome'];
         $cep = $dados['cep'];
         $logradouro = $dados['logradouro'];
+        $numero = $dados['numero'];
         $bairro = $dados['bairro'];
         $localidade = $dados['localidade'];
         $uf = $dados['uf'];
@@ -140,6 +154,7 @@ class Escola
                   nome = '$nome',
                   cep = '$cep',
                   logradouro = '$logradouro',
+                  numero = '$numero',
                   bairro = '$bairro',
                   localidade = '$localidade',
                   uf = '$uf'
