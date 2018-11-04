@@ -27,8 +27,8 @@ include_once ('../cabecalho.php');
                 ?>
                 <tr>
                     <td>
-                        <a href="formaulario.php?id_escola=<?= $row['id_escola'];?>" class="btn btn-info">Alterar</a>
-                        <a href="processamento.php?acao=excluir&id_escola=<?= $row['id_escola'];?>" class="btn btn-danger">Excluir</a>
+                        <a href="../escola/formaulario.php?id_escola=<?= $row['id_escola'];?>" class="btn btn-info">Alterar</a>
+                        <a href="../escola/processamento.php?acao=excluir&id_escola=<?= $row['id_escola'];?>" class="btn btn-danger">Excluir</a>
                     </td>
                     <td><?= $row['id_escola'];?></td>
                     <td><?= $row['nome'];?></td>

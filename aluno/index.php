@@ -35,8 +35,8 @@ include_once ('../cabecalho.php');
             foreach ($aaluno as $aluno) {
                 ?>
                 <tr>
-                    <td><a href="formaulario.php?id_aluno=<?= $aluno['id_aluno'];?>" class="btn btn-info">Alterar</a>
-                        <a href="processamento.php?acao=excluir&id_aluno=<?= $aluno['id_aluno'];?>" class="btn btn-danger">Excluir</a>
+                    <td><a href="../aluno/formaulario.php?id_aluno=<?= $aluno['id_aluno'];?>" class="btn btn-info">Alterar</a>
+                        <a href="../aluno/processamento.php?acao=excluir&id_aluno=<?= $aluno['id_aluno'];?>" class="btn btn-danger">Excluir</a>
                     </td>
                     <td><?= $aluno['id_aluno'];?></td>
                     <td><?= $aluno['nome'];?></td>
@@ -51,7 +51,6 @@ include_once ('../cabecalho.php');
                     <td><?php
                         foreach ($instituicao as $escola){ ?>
                             <?= ($aluno['id_escola'] == $escola['id_escola'])? "{$escola['nome']}" : '';?>
-
                         <?php } ?>
                     </td>
                 </tr>

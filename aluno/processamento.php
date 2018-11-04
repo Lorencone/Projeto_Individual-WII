@@ -19,4 +19,4 @@ switch ($_GET['acao']){
         break;
 }
 
-header('location: index.php');
+header('location: ../cadastro/index.php#aluno');

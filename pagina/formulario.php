@@ -12,7 +12,7 @@ include_once("../cabecalho.php");
     <div class="container" style="margin-top: 60px;">
         <h1>Pagina</h1>
         <br/>
-        <form method="post" action="../pagina/processamento.php?acao=salvar" class="form-horizontal">
+        <form method="post" action="processamento.php?acao=salvar" class="form-horizontal">
             <input type="hidden" name="id_pagina" value="<?= $pagina->getIdPagina(); ?>">
             <div class="form-group">
                 <label for="nome" class="col-sm-2 control-label">Nome</label>

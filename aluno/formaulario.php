@@ -128,11 +128,6 @@ include_once("../cabecalho.php");
                 <div class="col-sm-offset-2 col-sm-10">
                     <button type="submit" class="btn btn-success">Salvar</button>
                     <button type="reset" class="btn btn-info">Limpar</button>
-                    <?php
-                    if(!empty($_GET['id_aluno'])){
-                        echo "<a href='../aluno/processamento.php?acao=excluir&id_aluno={$aluno->getIdAluno()}' class='btn btn-warning'>Excluir</a>";
-                    }
-                    ?>
                     <a href="../cadastro/index.php#aluno" class="btn btn-danger">Voltar</a>
                 </div>
             </div>

@@ -32,8 +32,9 @@ include_once ('../cabecalho.php');
             foreach ($contrato as $row) {
                 ?>
                 <tr>
-                    <td><a href="formaulario.php?id_contrato=<?= $row['id_contrato'];?>" class="btn btn-info">Alterar</a>
-                        <a href="processamento.php?id_contrato=<?= $row['id_contrato'];?>" class="btn btn-danger">Excluir</a></td>
+                    <td>
+                        <a href="../contrato/formaulario.php?id_contrato=<?= $row['id_contrato'];?>" class="btn btn-info">Alterar</a>
+                        <a href="../contrato/processamento.php?id_contrato=<?= $row['id_contrato'];?>" class="btn btn-danger">Excluir</a></td>
                     <td><?= $row['id_contrato'];?></td>
                     <td><?= $row['numero'];?></td>
                     <td><?= $row['data_inicio'];?></td>

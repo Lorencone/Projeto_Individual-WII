@@ -11,7 +11,7 @@ include_once("../cabecalho.php");
     <div class="container" style="margin-top: 60px;">
         <h1>Perfil</h1>
         <br/>
-        <form method="post" action="../perfil/processamento.php?acao=salvar" class="form-horizontal">
+        <form method="post" action="processamento.php?acao=salvar" class="form-horizontal">
             <input type="hidden" name="id_perfil" value="<?= $perfil->getIdPerfil(); ?>">
             <div class="form-group">
                 <label for="nome" class="col-sm-2 control-label">Nome</label>

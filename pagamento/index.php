@@ -32,8 +32,8 @@ include_once ('../cabecalho.php');
                 ?>
                 <tr>
                     <td>
-                        <a href="formaulario.php?id_pagamento=<?= $row['id_pagamento'];?>" class="btn btn-info">Alterar</a>
-                        <a href="processamento.php?acao=excluir&id_pagamento=<?= $row['id_pagamento'];?>" class="btn btn-danger">Excluir</a>
+                        <a href="../pagamento/formaulario.php?id_pagamento=<?= $row['id_pagamento'];?>" class="btn btn-info">Alterar</a>
+                        <a href="../pagamento/processamento.php?acao=excluir&id_pagamento=<?= $row['id_pagamento'];?>" class="btn btn-danger">Excluir</a>
                     </td>
                     <td><?= $row['id_pagamento'];?></td>
                     <td>

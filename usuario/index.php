@@ -24,8 +24,8 @@ $ausuarios = $usuarios->recuperarDados();
             ?>
             <tr>
                 <td>
-                    <a href="../usuario/formulario.php?&id_usuario=<?= $usuario['id_usuario']?>" class="btn btn-info">Alterar</a>
-                    <a href="../usuario/processamento.php?acao=exluir&id_usuario=<?= $usuario['id_usuario']?>" class="btn btn-info">Excluir</a>
+                    <a href="../usuario/formulario.php?id_usuario=<?= $usuario['id_usuario']?>" class="btn btn-info">Alterar</a>
+                    <a href="../usuario/processamento.php?acao=exluir&id_usuario=<?= $usuario['id_usuario']?>" class="btn btn-danger">Excluir</a>
                 </td>
                 <td><?= $usuario['id_usuario']?></td>
                 <td><?= $usuario['nome']?></td>

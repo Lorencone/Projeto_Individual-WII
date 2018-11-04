@@ -4,7 +4,7 @@ $paginas = new Pagina();
 $apaginas = $paginas->recuperarDados();
 ?>
     <div class="container" style="margin-top: 60px;">
-        <h2>Pagina</h2>
+        <h2>Página</h2>
         <br/>
         <a href="../pagina/formulario.php" class="btn btn-success">Cadastrar</a>
         <br/>
@@ -25,7 +25,7 @@ $apaginas = $paginas->recuperarDados();
                 <tr>
                     <td>
                         <a href="../pagina/formulario.php?&id_pagina=<?= $pagina['id_pagina']?>" class="btn btn-info">Alterar</a>
-                        <a href="../pagina/processamento.php?acao=exluir&id_pagina=<?= $pagina['id_pagina']?>" class="btn btn-info">Excluir</a>
+                        <a href="../pagina/processamento.php?acao=exluir&id_pagina=<?= $pagina['id_pagina']?>" class="btn btn-danger">Excluir</a>
                     </td>
                     <td><?= $pagina['id_pagina']?></td>
                     <td><?= $pagina['nome']?></td>
