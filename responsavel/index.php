@@ -10,7 +10,7 @@ include_once ('../cabecalho.php');
     <div class="container responsavel" style="margin-top: 60px;">
         <h2>Responsaveis</h2>
         <br/>
-        <a href="../responsavel/insert.php" class="btn btn-success">Cadastrar</a>
+        <a href="../responsavel/formulario.php" class="btn btn-success">Cadastrar</a>
         <br/>
         <br/>
         <table class="table table-hover active">
@@ -28,7 +28,7 @@ include_once ('../cabecalho.php');
                 ?>
                 <tr>
                     <td>
-                        <a href="../responsavel/formaulario.php?id_responsavel=<?= $row['id_responsavel'];?>" class="btn btn-info">Alterar</a>
+                        <a href="../responsavel/formulario.php?id_responsavel=<?= $row['id_responsavel'];?>" class="btn btn-info">Alterar</a>
                         <a href="../responsavel/processamento.php?acao=excluir&id_responsavel=<?= $row['id_responsavel'];?>" class="btn btn-danger">Excluir</a>
                     </td>
                     <td><?= $row['id_responsavel'];?></td>

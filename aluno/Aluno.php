@@ -283,7 +283,7 @@ class Aluno
         $conexao = new Conexao();
 
         $sql = "SELECT COUNT(nome) qtd FROM aluno WHERE nome = '$nome'";
-        $dados = $conexao->recuperarDados($sql);
+        $dados = $conexao->recuperar($sql);
 
         return $dados[0]['qtd'];
     }

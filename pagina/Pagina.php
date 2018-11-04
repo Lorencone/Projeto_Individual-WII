@@ -55,7 +55,7 @@ class Pagina
         $conexao = new Conexao();
 
         $sql = "select * from pagina order by nome";
-        return $conexao->recuperarDados($sql);
+        return $conexao->recuperar($sql);
     }
 
     public function carregarPorId($id_pagina)
@@ -66,7 +66,7 @@ class Pagina
 
         $sql = "select * from pagina where id_pagina = '$id_pagina'";
 
-        $dados = $conexao->recuperarDados($sql);
+        $dados = $conexao->recuperar($sql);
 
         $this->id_pagina = $dados[0]['id_pagina'];
         $this->nome = $dados[0]['nome'];
@@ -145,7 +145,7 @@ class Pagina
         $conexao = new Conexao();
 
         $sql = "SELECT COUNT(nome) qtd FROM pagina WHERE nome = '$nome'";
-        $dados = $conexao->recuperarDados($sql);
+        $dados = $conexao->recuperar($sql);
 
         return $dados[0]['qtd'];
     }

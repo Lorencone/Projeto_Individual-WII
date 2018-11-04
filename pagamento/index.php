@@ -12,7 +12,7 @@ include_once ('../cabecalho.php');
     <div class="container" style="margin-top: 60px;">
         <h2>Pagamentos</h2>
         <br/>
-        <a href="../pagamento/insert.php" class="btn btn-success">Cadastrar</a>
+        <a href="../pagamento/formulario.php" class="btn btn-success">Cadastrar</a>
         <br/>
         <br/>
         <table class="table table-hover active">
@@ -32,7 +32,7 @@ include_once ('../cabecalho.php');
                 ?>
                 <tr>
                     <td>
-                        <a href="../pagamento/formaulario.php?id_pagamento=<?= $row['id_pagamento'];?>" class="btn btn-info">Alterar</a>
+                        <a href="../pagamento/formulario.php?id_pagamento=<?= $row['id_pagamento'];?>" class="btn btn-info">Alterar</a>
                         <a href="../pagamento/processamento.php?acao=excluir&id_pagamento=<?= $row['id_pagamento'];?>" class="btn btn-danger">Excluir</a>
                     </td>
                     <td><?= $row['id_pagamento'];?></td>

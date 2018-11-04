@@ -13,7 +13,7 @@ include_once ('../cabecalho.php');
     <div class="container" style="margin-top: 60px;">
         <h2>Contratos</h2>
         <br/>
-        <a href="../contrato/insert.php" class="btn btn-success">Cadastrar</a>
+        <a href="../contrato/formulario.php" class="btn btn-success">Cadastrar</a>
         <br/>
         <br/>
         <table class="table table-hover active">
@@ -33,7 +33,7 @@ include_once ('../cabecalho.php');
                 ?>
                 <tr>
                     <td>
-                        <a href="../contrato/formaulario.php?id_contrato=<?= $row['id_contrato'];?>" class="btn btn-info">Alterar</a>
+                        <a href="../contrato/formulario.php?id_contrato=<?= $row['id_contrato'];?>" class="btn btn-info">Alterar</a>
                         <a href="../contrato/processamento.php?id_contrato=<?= $row['id_contrato'];?>" class="btn btn-danger">Excluir</a></td>
                     <td><?= $row['id_contrato'];?></td>
                     <td><?= $row['numero'];?></td>

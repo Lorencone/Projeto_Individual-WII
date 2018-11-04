@@ -146,7 +146,7 @@ class Contrato
         $conexao = new Conexao();
 
         $sql = "SELECT COUNT(numero) qtd FROM contrato WHERE numero = '$numero'";
-        $dados = $conexao->recuperarDados($sql);
+        $dados = $conexao->recuperar($sql);
 
         return $dados[0]['qtd'];
     }

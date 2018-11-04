@@ -10,7 +10,7 @@ include_once ('../cabecalho.php');
     <div class="container" style="margin-top: 60px;">
         <h2>Escolas</h2>
         <br/>
-        <a href="../escola/insert.php" class="btn btn-success">Cadastrar</a>
+        <a href="../escola/formulario.php" class="btn btn-success">Cadastrar</a>
         <br/>
         <br/>
         <table class="table table-hover active">
@@ -27,7 +27,7 @@ include_once ('../cabecalho.php');
                 ?>
                 <tr>
                     <td>
-                        <a href="../escola/formaulario.php?id_escola=<?= $row['id_escola'];?>" class="btn btn-info">Alterar</a>
+                        <a href="../escola/formulario.php?id_escola=<?= $row['id_escola'];?>" class="btn btn-info">Alterar</a>
                         <a href="../escola/processamento.php?acao=excluir&id_escola=<?= $row['id_escola'];?>" class="btn btn-danger">Excluir</a>
                     </td>
                     <td><?= $row['id_escola'];?></td>

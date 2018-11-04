@@ -32,7 +32,8 @@ class Perfil
         $conexao = new Conexao();
 
         $sql = "select * from perfil order by nome";
-        return $conexao->recuperarDados($sql);
+
+        return $conexao->recuperar($sql);
     }
 
     public function carregarPorId($id_perfil)
@@ -43,7 +44,7 @@ class Perfil
 
         $sql = "select * from perfil where id_perfil = '$id_perfil'";
 
-        $dados = $conexao->recuperarDados($sql);
+        $dados = $conexao->recuperar($sql);
 
         $this->id_perfil = $dados[0]['id_perfil'];
         $this->nome = $dados[0]['nome'];
@@ -90,7 +91,7 @@ class Perfil
         $conexao = new Conexao();
 
         $sql = "SELECT COUNT(nome) qtd FROM perfil WHERE nome = '$nome'";
-        $dados = $conexao->recuperarDados($sql);
+        $dados = $conexao->recuperar($sql);
 
         return $dados[0]['qtd'];
     }

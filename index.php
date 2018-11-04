@@ -1,2 +1,2 @@
 <?php
-header('location: ../cadastro/index.php#usuario');
+header('location: cadastro/index.php');

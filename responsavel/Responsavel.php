@@ -150,7 +150,7 @@ class Responsavel
         $conexao = new Conexao();
 
         $sql = "SELECT COUNT(nome) qtd FROM responsavel WHERE nome = '$nome'";
-        $dados = $conexao->recuperarDados($sql);
+        $dados = $conexao->recuperar($sql);
 
         return $dados[0]['qtd'];
     }
