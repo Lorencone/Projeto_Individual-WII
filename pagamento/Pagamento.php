@@ -186,4 +186,5 @@ class Pagamento
         $sql = "delete from pagamento where id_pagamento = $id_pagamento";
         return $conexao->executar($sql);
     }
+
 }

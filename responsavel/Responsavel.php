@@ -144,4 +144,15 @@ class Responsavel
         $sql = "delete from responsavel where id_responsavel = $id_responsavel";
         return $conexao->executar($sql);
     }
+
+    public function existeNome($nome)
+    {
+        $conexao = new Conexao();
+
+        $sql = "SELECT COUNT(nome) qtd FROM responsavel WHERE nome = '$nome'";
+        $dados = $conexao->recuperarDados($sql);
+
+        return $dados[0]['qtd'];
+    }
+
 }

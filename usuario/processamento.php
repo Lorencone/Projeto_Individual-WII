@@ -25,7 +25,6 @@ switch ($_GET['acao']) {
                 echo "<div class='alert' style='background: #2093ee; color: #ffffff'><h3 class='text-center'>Já existe {$existe} pessoa chamada de {$_GET['nome']}, informe outra.</h3></div>";
             }
         }
-
         die;
         break;
 
@@ -33,6 +32,5 @@ switch ($_GET['acao']) {
         $usuario->logar($_POST);
         break;
 }
-header('location: ../cadastro/index.php#usuario');
 
-?>
+header('location: ../cadastro/index.php#usuario');

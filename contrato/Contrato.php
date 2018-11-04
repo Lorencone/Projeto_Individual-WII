@@ -140,4 +140,15 @@ class Contrato
         $conexao = new Conexao();
         return $conexao->executar($sql);
     }
+
+    public function existeNome($numero)
+    {
+        $conexao = new Conexao();
+
+        $sql = "SELECT COUNT(numero) qtd FROM contrato WHERE numero = '$numero'";
+        $dados = $conexao->recuperarDados($sql);
+
+        return $dados[0]['qtd'];
+    }
+
 }

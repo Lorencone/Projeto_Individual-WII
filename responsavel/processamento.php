@@ -22,6 +22,20 @@ switch ($_GET['acao']){
     case 'excluir':
         $responsavel->excluir($_GET['id_responsavel']);
         break;
+
+    case 'verificar_nome':
+        $existe = $responsavel->existeNome($_GET['nome']);
+
+        if ($existe){
+            if ($existe > 1){
+                echo "<div class='alert' style='background: #2093ee; color: #ffffff'><h3 class='text-center'>Já existem {$existe} pessoas chamadas de  {$_GET['nome']}, informe outra. </h3></div>";
+            } else {
+                echo "<div class='alert' style='background: #2093ee; color: #ffffff'><h3 class='text-center'>Já existe {$existe} pessoa chamada de {$_GET['nome']}, informe outra.</h3></div>";
+            }
+        }
+        die;
+        break;
+
 }
 
 header('location: ../cadastro/index.php#responsavel');

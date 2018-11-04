@@ -171,4 +171,15 @@ class Escola
         $sql = "delete from escola where id_escola = $id_escola";
         return $conexao->executar($sql);
     }
+
+    public function existeNome($nome)
+    {
+        $conexao = new Conexao();
+
+        $sql = "SELECT COUNT(nome) qtd FROM escola WHERE nome = '$nome'";
+        $dados = $conexao->recuperarDados($sql);
+
+        return $dados[0]['qtd'];
+    }
+
 }

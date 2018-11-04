@@ -277,4 +277,15 @@ class Aluno
         $sql = "delete from aluno where id_aluno = $id_aluno";
         return $conexao->executar($sql);
     }
+
+    public function existeNome($nome)
+    {
+        $conexao = new Conexao();
+
+        $sql = "SELECT COUNT(nome) qtd FROM aluno WHERE nome = '$nome'";
+        $dados = $conexao->recuperarDados($sql);
+
+        return $dados[0]['qtd'];
+    }
+
 }
