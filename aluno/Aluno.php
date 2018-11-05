@@ -1,4 +1,5 @@
 <?php
+include_once "../conexao/Conexao.php";
 
 class Aluno
 {
@@ -225,6 +226,9 @@ class Aluno
                           values ('$nome','$data_nascimento','$sexo','$telefone','$cpf','$turno','$cep',
                                   '$logradouro','$numero','$bairro','$localidade','$uf','$id_responsavel','$id_escola')";
 
+        print_r($sql);
+        die;
+
         return $conexao->executar($sql);
     }
 
@@ -267,6 +271,9 @@ class Aluno
                   
                 where id_aluno = $id_aluno";
 
+        print_r($sql);
+        die;
+
         return $conexao->executar($sql);
     }
 
@@ -275,6 +282,10 @@ class Aluno
         $conexao = new Conexao();
 
         $sql = "delete from aluno where id_aluno = $id_aluno";
+
+        print_r($sql);
+        die;
+
         return $conexao->executar($sql);
     }
 

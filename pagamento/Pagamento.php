@@ -1,5 +1,5 @@
 <?php
-
+include_once "../conexao/Conexao.php";
 
 class Pagamento
 {
@@ -148,6 +148,10 @@ class Pagamento
                 values ('$valor','$tipo_pagamento','$data_vencimento','$data_desconto',
                         '$parcelas','$valor_parcelado','$desconto','$id_contrato')";
 
+
+        print_r($sql);
+        die;
+
         return $conexao->executar($sql);
     }
 
@@ -176,6 +180,10 @@ class Pagamento
                 id_contrato = '$id_contrato'
                 where id_pagamento = $id_pagamento ";
 
+
+        print_r($sql);
+        die;
+
         return $conexao->executar($sql);
     }
 
@@ -184,6 +192,10 @@ class Pagamento
         $conexao = new Conexao();
 
         $sql = "delete from pagamento where id_pagamento = $id_pagamento";
+
+        print_r($sql);
+        die;
+
         return $conexao->executar($sql);
     }
 

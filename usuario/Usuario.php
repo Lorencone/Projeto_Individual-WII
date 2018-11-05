@@ -107,6 +107,7 @@ class Usuario{
 
         print_r($sql);
         die;
+        
         return $conexao->executar($sql);
     }
 
@@ -129,18 +130,22 @@ class Usuario{
                 id_perfil = '$id_perfil'
 
                 WHERE id_usuario = '$id_usuario'";
+        
         print_r($sql);
         die;
+        
         return $conexao->executar($sql);
     }
 
-    public function deletar($id_usuario)
+    public function excluir($id_usuario)
     {
 
         $conexao = new Conexao();
         $sql = "DELETE FROM usuario WHERE id_usuario = '$id_usuario'";
+        
         print_r($sql);
         die;
+        
         return $conexao->executar($sql);
     }
 

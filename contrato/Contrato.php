@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Lorençone
- * Date: 03/11/2018
- * Time: 19:24
- */
+include_once "../conexao/Conexao.php";
 
 class Contrato
 {
@@ -108,6 +103,10 @@ class Contrato
 
         $sql = "INSERT INTO contrato (numero, data_inicio, data_termino, valor, id_aluno) 
                 VALUES ('$numero', '$data_inicio', '$data_termino', '$valor', '$id_aluno')";
+
+        print_r($sql);
+        die;
+
         $conexao = new Conexao();
 
         return $conexao->executar($sql);
@@ -130,6 +129,9 @@ class Contrato
                 id_aluno = '$id_aluno' 
                 WHERE id_contrato = $id_contrato";
 
+        print_r($sql);
+        die;
+
         $conexao = new Conexao();
         return $conexao->executar($sql);
     }
@@ -138,6 +140,10 @@ class Contrato
     {
         $sql = "DELETE FROM contrato WHERE id_contrato = $id_contrato";
         $conexao = new Conexao();
+
+        print_r($sql);
+        die;
+
         return $conexao->executar($sql);
     }
 

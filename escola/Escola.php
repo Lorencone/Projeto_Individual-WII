@@ -1,4 +1,5 @@
 <?php
+include_once "../conexao/Conexao.php";
 
 class Escola
 {
@@ -133,6 +134,10 @@ class Escola
         $sql = "insert into escola (nome, cep, logradouro, numero, bairro, localidade, uf)
                           values ('$nome','$cep','$logradouro','$numero','$bairro','$localidade','$uf')";
 
+
+        print_r($sql);
+        die;
+
         return $conexao->executar($sql);
     }
 
@@ -161,6 +166,10 @@ class Escola
                       
                 where id_escola = $id_escola";
 
+
+        print_r($sql);
+        die;
+
         return $conexao->executar($sql);
     }
 
@@ -169,6 +178,10 @@ class Escola
         $conexao = new Conexao();
 
         $sql = "delete from escola where id_escola = $id_escola";
+
+        print_r($sql);
+        die;
+
         return $conexao->executar($sql);
     }
 

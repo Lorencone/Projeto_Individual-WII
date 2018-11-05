@@ -12,7 +12,7 @@ switch ($_GET['acao']) {
             $usuario->inserir($_POST);
         }
     case 'excluir':
-        $usuario->deletar($_GET['id_usuario']);
+        $usuario->excluir($_GET['id_usuario']);
         break;
 
     case 'verificar_nome':

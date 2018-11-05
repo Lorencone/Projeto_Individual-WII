@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Lorençone
- * Date: 03/11/2018
- * Time: 19:23
- */
+include_once "../conexao/Conexao.php";
 
 class Responsavel
 {
@@ -112,6 +107,9 @@ class Responsavel
         $sql = "insert into responsavel (nome, data_nascimento, sexo, telefone, cpf)
                 values ('$nome', '$data_nascimento', '$sexo', '$telefone', '$cpf')";
 
+        print_r($sql);
+        die;
+
         return $conexao->executar($sql);
     }
 
@@ -134,6 +132,9 @@ class Responsavel
                 cpf = '$cpf' 
                 where id_responsavel = $id_responsavel ";
 
+        print_r($sql);
+        die;
+
         return $conexao->executar($sql);
     }
 
@@ -142,6 +143,10 @@ class Responsavel
         $conexao = new Conexao();
 
         $sql = "delete from responsavel where id_responsavel = $id_responsavel";
+
+        print_r($sql);
+        die;
+
         return $conexao->executar($sql);
     }
 
