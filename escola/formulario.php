@@ -21,39 +21,39 @@ include_once("../cabecalho.php");
                 </div>
             </div>
             <div class="form-group">
-                <label for="endereco" class="col-sm-2 control-label">CEP</label>
+                <label for="cep" class="col-sm-2 control-label">CEP</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="endereco" name="endereco" value="<?= $escola->getCep(); ?>">
+                    <input type="text" class="form-control" id="cep" name="cep" value="<?= $escola->getCep(); ?>">
                 </div>
             </div>
             <div class="form-group">
-                <label for="endereco" class="col-sm-2 control-label">Logradouro</label>
+                <label for="logradouro" class="col-sm-2 control-label">Logradouro</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="endereco" name="endereco" value="<?= $escola->getLogradouro(); ?>">
+                    <input type="text" class="form-control" id="logradouro" name="logradouro" value="<?= $escola->getLogradouro(); ?>">
                 </div>
             </div>
             <div class="form-group">
-                <label for="endereco" class="col-sm-2 control-label">Número</label>
+                <label for="numero" class="col-sm-2 control-label">Número</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="endereco" name="endereco" value="<?= $escola->getNumero(); ?>">
+                    <input type="text" class="form-control" id="numero" name="numero" value="<?= $escola->getNumero(); ?>">
                 </div>
             </div>
             <div class="form-group">
-                <label for="endereco" class="col-sm-2 control-label">Bairro</label>
+                <label for="bairro" class="col-sm-2 control-label">Bairro</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="endereco" name="endereco" value="<?= $escola->getBairro(); ?>">
+                    <input type="text" class="form-control" id="bairro" name="bairro" value="<?= $escola->getBairro(); ?>">
                 </div>
             </div>
             <div class="form-group">
-                <label for="endereco" class="col-sm-2 control-label">Localidade</label>
+                <label for="localidade" class="col-sm-2 control-label">Localidade</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="endereco" name="endereco" value="<?= $escola->getLocalidade(); ?>">
+                    <input type="text" class="form-control" id="localidade" name="localidade" value="<?= $escola->getLocalidade(); ?>">
                 </div>
             </div>
             <div class="form-group">
-                <label for="endereco" class="col-sm-2 control-label">UF</label>
+                <label for="uf" class="col-sm-2 control-label">UF</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="endereco" name="endereco" value="<?= $escola->getUf(); ?>">
+                    <input type="text" class="form-control" id="uf" name="uf" value="<?= $escola->getUf(); ?>">
                 </div>
             </div>
             <div class="form-group">
@@ -66,5 +66,6 @@ include_once("../cabecalho.php");
         </form>
     </div>
 <?php
+include_once("../location/viacep.php");
 include_once("../rodape.php");
 ?>

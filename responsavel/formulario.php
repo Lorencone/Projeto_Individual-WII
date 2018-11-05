@@ -34,6 +34,12 @@ include_once("../cabecalho.php");
                 </div>
             </div>
             <div class="form-group">
+                <label for="telefone" class="col-sm-2 control-label">Telefone</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="telefone" name="telefone" value="<?= $responsavel->getTelefone(); ?>">
+                </div>
+            </div>
+            <div class="form-group">
                 <label for="cpf" class="col-sm-2 control-label">CPF</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="cpf" name="cpf" value="<?= $responsavel->getCpf(); ?>">

@@ -1,4 +1,6 @@
-<!-- Adicionando Javascript -->
+<!-- carregando o JQUERY para a execução de buscar o CEP -->
+<script src='../js/jquery-3.3.1.js'></script>
+<!-- Adicionando o script de pesquisa -->
 <script type="text/javascript" >
 
     $(document).ready(function() {
@@ -7,7 +9,7 @@
             // Limpa valores do formulário de cep.
             $("#logradouro").val("");
             $("#bairro").val("");
-            $("#cidade").val("");
+            $("#localidade").val("");
             $("#uf").val("");
         }
 
@@ -29,7 +31,7 @@
                     //Preenche os campos com "..." enquanto consulta webservice.
                     $("#logradouro").val("...");
                     $("#bairro").val("...");
-                    $("#cidade").val("...");
+                    $("#localidade").val("...");
                     $("#uf").val("...");
 
                     //Consulta o webservice viacep.com.br/
@@ -39,7 +41,7 @@
                             //Atualiza os campos com os valores da consulta.
                             $("#logradouro").val(dados.logradouro);
                             $("#bairro").val(dados.bairro);
-                            $("#cidade").val(dados.localidade);
+                            $("#localidade").val(dados.localidade);
                             $("#uf").val(dados.uf);
                         } //end if.
                         else {
