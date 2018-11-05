@@ -1,8 +1,10 @@
+CREATE DATABASE  IF NOT EXISTS `escolar` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `escolar`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: escolar
 -- ------------------------------------------------------
--- Server version	5.5.5-10.1.29-MariaDB
+-- Server version	5.5.5-10.1.36-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -27,11 +29,12 @@ CREATE TABLE `contrato` (
   `numero` int(11) NOT NULL,
   `data_inicio` date NOT NULL,
   `data_termino` date NOT NULL,
-  `id_aluno` int(11) DEFAULT NULL,
+  `valor` int(11) NOT NULL,
+  `id_aluno` int(11) NOT NULL,
   PRIMARY KEY (`id_contrato`),
   KEY `fk_contrato_aluno1_idx` (`id_aluno`),
   CONSTRAINT `fk_contrato_aluno1` FOREIGN KEY (`id_aluno`) REFERENCES `aluno` (`id_aluno`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +43,6 @@ CREATE TABLE `contrato` (
 
 LOCK TABLES `contrato` WRITE;
 /*!40000 ALTER TABLE `contrato` DISABLE KEYS */;
-INSERT INTO `contrato` VALUES (2,12345,'2018-01-16','2018-07-16',1),(3,2545,'2018-02-25','2018-07-25',2);
 /*!40000 ALTER TABLE `contrato` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-14 22:06:01
+-- Dump completed on 2018-11-04 22:15:54

@@ -1,8 +1,10 @@
+CREATE DATABASE  IF NOT EXISTS `escolar` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `escolar`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: escolar
 -- ------------------------------------------------------
--- Server version	5.5.5-10.1.29-MariaDB
+-- Server version	5.5.5-10.1.36-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -25,12 +27,14 @@ DROP TABLE IF EXISTS `escola`;
 CREATE TABLE `escola` (
   `id_escola` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) COLLATE utf8_bin NOT NULL,
-  `endereco` varchar(200) COLLATE utf8_bin NOT NULL,
-  `id_cidade` int(11) NOT NULL,
-  PRIMARY KEY (`id_escola`),
-  KEY `fk_escola_cidade1_idx` (`id_cidade`),
-  CONSTRAINT `fk_escola_cidade1` FOREIGN KEY (`id_cidade`) REFERENCES `cidade` (`id_cidade`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `cep` int(11) NOT NULL,
+  `logradouro` varchar(200) COLLATE utf8_bin NOT NULL,
+  `numero` int(11) NOT NULL,
+  `bairro` varchar(100) COLLATE utf8_bin NOT NULL,
+  `localidade` varchar(50) COLLATE utf8_bin NOT NULL,
+  `uf` varchar(15) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id_escola`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +43,6 @@ CREATE TABLE `escola` (
 
 LOCK TABLES `escola` WRITE;
 /*!40000 ALTER TABLE `escola` DISABLE KEYS */;
-INSERT INTO `escola` VALUES (1,'IESB -Campus OESTE','QNN 31 - Áreas Especiais B/C/D/E  Ceilândia Norte',9),(2,'Centro de Ensino Médio 01','Area Especial 02, s/n - Qd 04',4);
 /*!40000 ALTER TABLE `escola` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-14 22:06:01
+-- Dump completed on 2018-11-04 22:15:55

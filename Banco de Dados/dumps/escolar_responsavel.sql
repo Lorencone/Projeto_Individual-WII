@@ -1,8 +1,10 @@
+CREATE DATABASE  IF NOT EXISTS `escolar` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `escolar`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: escolar
 -- ------------------------------------------------------
--- Server version	5.5.5-10.1.29-MariaDB
+-- Server version	5.5.5-10.1.36-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -30,7 +32,7 @@ CREATE TABLE `responsavel` (
   `telefone` varchar(15) COLLATE utf8_bin NOT NULL,
   `cpf` varchar(45) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id_responsavel`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +41,6 @@ CREATE TABLE `responsavel` (
 
 LOCK TABLES `responsavel` WRITE;
 /*!40000 ALTER TABLE `responsavel` DISABLE KEYS */;
-INSERT INTO `responsavel` VALUES (1,'Nilcéia Lorençone Moreira','1967-01-16','F','','417.121.291-04'),(2,'Julio Eustaquio Armanio','1987-02-16','M','','658.587.854-98');
 /*!40000 ALTER TABLE `responsavel` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-14 22:06:01
+-- Dump completed on 2018-11-04 22:15:55

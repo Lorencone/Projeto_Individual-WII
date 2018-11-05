@@ -1,8 +1,10 @@
+CREATE DATABASE  IF NOT EXISTS `escolar` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `escolar`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: escolar
 -- ------------------------------------------------------
--- Server version	5.5.5-10.1.29-MariaDB
+-- Server version	5.5.5-10.1.36-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -16,27 +18,26 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `cidade`
+-- Table structure for table `perfil`
 --
 
-DROP TABLE IF EXISTS `cidade`;
+DROP TABLE IF EXISTS `perfil`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `cidade` (
-  `id_cidade` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(100) COLLATE utf8_bin NOT NULL,
-  PRIMARY KEY (`id_cidade`)
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+CREATE TABLE `perfil` (
+  `id_perfil` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(45) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id_perfil`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `cidade`
+-- Dumping data for table `perfil`
 --
 
-LOCK TABLES `cidade` WRITE;
-/*!40000 ALTER TABLE `cidade` DISABLE KEYS */;
-INSERT INTO `cidade` VALUES (1,'Plano Piloto'),(2,'Gama'),(3,'Taguatinga'),(4,'Brazlândia'),(5,'Sobradinho'),(6,'Planaltina'),(7,'Paranoá'),(8,'Núcleo Bandeirante'),(9,'Ceilândia'),(10,'Guará'),(11,'Cruzeiro'),(12,'Samambaia'),(13,'Santa Maria'),(14,'São Sebastião'),(15,'Recanto das Emas'),(16,'Lago Sul'),(17,'Riacho Fundo'),(18,'Lago Norte'),(19,'Candangolândia'),(20,'Águas Claras'),(21,'Riacho Fundo II'),(22,'Sudoeste/Octogonal'),(23,'Varjão'),(24,'Park Way'),(25,'SCIA'),(26,'Sobradinho II'),(27,'Jardim Botânico'),(28,'Itapoã'),(29,'SIA'),(30,'Vicente Pires'),(31,'Fercal');
-/*!40000 ALTER TABLE `cidade` ENABLE KEYS */;
+LOCK TABLES `perfil` WRITE;
+/*!40000 ALTER TABLE `perfil` DISABLE KEYS */;
+/*!40000 ALTER TABLE `perfil` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -48,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-14 22:06:01
+-- Dump completed on 2018-11-04 22:15:55
