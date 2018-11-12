@@ -1,3 +1,14 @@
+<?php
+//session_start();
+//include_once '../usuario/Usuario.php';
+//include_once '../perfil/Perfil.php';
+//
+//$possuiAcesso = (new Usuario())->possuiAcesso();
+//
+//if (!$possuiAcesso){
+//    header('location: ../usuario/login.php');
+//}
+//?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -28,6 +39,7 @@
 </head>
 <body>
 <!-- Menu Superior -->
+<?php if (!empty($_SESSION['usuario'])) { ?>
 <nav class="navbar navbar-inverse navbar-static-top">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -47,3 +59,4 @@
         </div>
     </div>
 </nav>
+<?php }?>

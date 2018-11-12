@@ -3,6 +3,9 @@ include_once "../conexao/Conexao.php";
 
 class Perfil
 {
+    const PERFIL_USUARIO = 1;
+    const PERFIL_ADMINISTRADOR = 2;
+    const PERFIL_EDITOR = 3;
 
     protected $id_perfil;
     protected $nome;
