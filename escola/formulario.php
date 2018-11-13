@@ -19,6 +19,7 @@ include_once("../cabecalho.php");
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="nome" name="nome" value="<?= $escola->getNome(); ?>">
                 </div>
+                <div id="mensagemNome" role="alert"></div>
             </div>
             <div class="form-group">
                 <label for="cep" class="col-sm-2 control-label">CEP</label>

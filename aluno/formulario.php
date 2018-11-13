@@ -24,6 +24,7 @@ include_once("../cabecalho.php");
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="nome" name="nome" value="<?= $aluno->getNome(); ?>">
                 </div>
+                <div id="mensagemNome" role="alert"></div>
             </div>
             <div class="form-group">
                 <label for="data_nascimento" class="col-sm-2 control-label">Data Nascimento</label>

@@ -135,8 +135,8 @@ class Escola
                           values ('$nome','$cep','$logradouro','$numero','$bairro','$localidade','$uf')";
 
 
-        print_r($sql);
-        die;
+//        print_r($sql);
+//        die;
 
         return $conexao->executar($sql);
     }
@@ -167,8 +167,8 @@ class Escola
                 where id_escola = $id_escola";
 
 
-        print_r($sql);
-        die;
+//        print_r($sql);
+//        die;
 
         return $conexao->executar($sql);
     }
@@ -179,8 +179,8 @@ class Escola
 
         $sql = "delete from escola where id_escola = $id_escola";
 
-        print_r($sql);
-        die;
+//        print_r($sql);
+//        die;
 
         return $conexao->executar($sql);
     }

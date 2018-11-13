@@ -30,8 +30,8 @@ include_once("../cabecalho.php");
             <div class="form-group">
                 <label for="publica" class="col-sm-2 control-label">Publica</label>
                 <div class="col-sm-10">
-                    <label class="radio-inline"><input required type="radio" name="publica" id="publica" value="1" <?= $pagina->getPublica() == "M" ? "checked" : '';?>>Sim</label>
-                    <label class="radio-inline"><input required type="radio" name="publica" id="publica" value="0" <?= $pagina->getPublica() == "F" ? "checked" : '';?>>Não</label>
+                    <label class="radio-inline"><input required type="radio" name="publica" id="publica" value="1" <?= $pagina->getPublica() == "1" ? "checked" : '';?>>Sim</label>
+                    <label class="radio-inline"><input required type="radio" name="publica" id="publica" value="0" <?= $pagina->getPublica() == "0" ? "checked" : '';?>>Não</label>
                 </div>
             </div>
             <div class="form-group">
