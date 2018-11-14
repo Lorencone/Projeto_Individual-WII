@@ -147,7 +147,7 @@ class Contrato
         return $conexao->executar($sql);
     }
 
-    public function existeNome($numero)
+    public function existeNumero($numero)
     {
         $conexao = new Conexao();
 

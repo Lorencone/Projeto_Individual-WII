@@ -16,7 +16,7 @@ switch ($_GET['acao']) {
         break;
 
     case 'verificar_nome':
-        $existe = $filme->existeNome($_GET['nome']);
+        $existe = $perfil->existeNome($_GET['nome']);
 
         if ($existe){
 

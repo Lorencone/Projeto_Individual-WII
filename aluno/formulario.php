@@ -12,13 +12,13 @@ if(!empty($_GET['id_aluno'])){
     $aluno->carregarPorId($_GET['id_aluno']);
 }
 
-include_once("../cabecalho.php");
+include_once('../cabecalho.php');
 ?>
     <div class="container" style="margin-top: 60px;">
         <h1>Aluno</h1>
         <br/>
         <form method="post" action="processamento.php?acao=salvar" class="form-horizontal">
-            <input type="hidden" name="id_aluno" value="<?= $aluno->getIdAluno(); ?>">
+            <input type="hidden" name="id_aluno" id="id_aluno" value="<?= $aluno->getIdAluno(); ?>">
             <div class="form-group">
                 <label for="nome" class="col-sm-2 control-label">Nome</label>
                 <div class="col-sm-10">
@@ -29,7 +29,7 @@ include_once("../cabecalho.php");
             <div class="form-group">
                 <label for="data_nascimento" class="col-sm-2 control-label">Data Nascimento</label>
                 <div class="col-sm-10">
-                    <input type="date" class="form-control" id="data_nascimento" name="data_nascimento" value="<?= $aluno->getDataNascimento(); ?>">
+                    <input type="date" class="form-control" id="data_nascimento" name="data_nascimento" value="<?= $aluno->getDataNascimento(); ?>" required>
                 </div>
             </div>
             <div class="form-group">
@@ -138,3 +138,19 @@ include_once("../cabecalho.php");
 include_once("../location/viacep.php");
 include_once("../rodape.php");
 ?>
+<script>
+    // AJAX para verificação do nome
+    $('#nome').change(function () {
+
+        $.ajax({
+            url: 'processamento.php?acao=verificar_nome&' + $('#nome').serialize(),
+            success: function (dados) {
+                $('#mensagemNome').html(dados);
+            }
+        });
+
+        // Verificação em JQUERY Load
+        // $('#mensagemNome').load('processamento.php?acao=verificar_nome&nome=' + $('#nome').val());
+
+    });
+</script>

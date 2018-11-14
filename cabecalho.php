@@ -39,7 +39,7 @@
 </head>
 <body>
 <!-- Menu Superior -->
-<?php if (!empty($_SESSION['usuario'])) { ?>
+<?php //if (!empty($_SESSION['usuario'])) { ?>
 <nav class="navbar navbar-inverse navbar-static-top">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -59,4 +59,4 @@
         </div>
     </div>
 </nav>
-<?php }?>
+<?php //}?>

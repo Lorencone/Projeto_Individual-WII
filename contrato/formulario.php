@@ -22,7 +22,7 @@ include_once("../cabecalho.php");
                 <div class="col-sm-10">
                     <input type="number" class="form-control" id="numero" name="numero" value="<?= $contrato->getNumero(); ?>">
                 </div>
-                <div id="mensagemNome" role="alert"></div>
+                <div id="mensagemNumero" role="alert"></div>
             </div>
             <div class="form-group">
                 <label for="id_aluno" class="col-sm-2 control-label">Aluno</label>
@@ -69,3 +69,19 @@ include_once("../cabecalho.php");
 <?php
 include_once("../rodape.php");
 ?>
+<script>
+    // AJAX para verificação do nome
+    $('#numero').change(function () {
+
+        $.ajax({
+            url: 'processamento.php?acao=verificar_nome&' + $('#numero').serialize(),
+            success: function (dados) {
+                $('#mensagemNumero').html(dados);
+            }
+        });
+
+        // Verificação em JQUERY Load
+        // $('#mensagemNome').load('processamento.php?acao=verificar_nome&nome=' + $('#nome').val());
+
+    });
+</script>

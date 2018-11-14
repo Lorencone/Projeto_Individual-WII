@@ -70,3 +70,19 @@ include_once("../cabecalho.php");
 include_once("../location/viacep.php");
 include_once("../rodape.php");
 ?>
+<script>
+    // AJAX para verificação do nome
+    $('#nome').change(function () {
+
+        $.ajax({
+            url: 'processamento.php?acao=verificar_nome&' + $('#nome').serialize(),
+            success: function (dados) {
+                $('#mensagemNome').html(dados);
+            }
+        });
+
+        // Verificação em JQUERY Load
+        // $('#mensagemNome').load('processamento.php?acao=verificar_nome&nome=' + $('#nome').val());
+
+    });
+</script>

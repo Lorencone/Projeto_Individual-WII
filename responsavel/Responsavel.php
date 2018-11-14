@@ -107,8 +107,8 @@ class Responsavel
         $sql = "insert into responsavel (nome, data_nascimento, sexo, telefone, cpf)
                 values ('$nome', '$data_nascimento', '$sexo', '$telefone', '$cpf')";
 
-        print_r($sql);
-        die;
+//        print_r($sql);
+//        die;
 
         return $conexao->executar($sql);
     }
@@ -132,8 +132,8 @@ class Responsavel
                 cpf = '$cpf' 
                 where id_responsavel = $id_responsavel ";
 
-        print_r($sql);
-        die;
+//        print_r($sql);
+//        die;
 
         return $conexao->executar($sql);
     }
@@ -144,8 +144,8 @@ class Responsavel
 
         $sql = "delete from responsavel where id_responsavel = $id_responsavel";
 
-        print_r($sql);
-        die;
+//        print_r($sql);
+//        die;
 
         return $conexao->executar($sql);
     }

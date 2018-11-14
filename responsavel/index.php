@@ -24,7 +24,7 @@ include_once ('../cabecalho.php');
             </thead>
             <?php
             // Foreach para exibição dos resultados da consulta
-            foreach ($responsavel as $row) {
+            foreach ($aresponsavel as $row) {
                 ?>
                 <tr>
                     <td>

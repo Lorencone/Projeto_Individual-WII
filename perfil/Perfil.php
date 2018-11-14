@@ -63,8 +63,8 @@ class Perfil
 
         $sql = "insert into perfil (nome) values ('$nome')";
 
-        print_r($sql);
-        die;
+//        print_r($sql);
+//        die;
 
         return $conexao->executar($sql);
     }
@@ -81,8 +81,8 @@ class Perfil
                   nome = '$nome'
                 where id_perfil = '$id_perfil'";
 
-        print_r($sql);
-        die;
+//        print_r($sql);
+//        die;
 
         return $conexao->executar($sql);
     }

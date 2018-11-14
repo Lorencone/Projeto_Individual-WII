@@ -28,7 +28,7 @@ $aperfils = $perfils->recuperarDados();
                     </td>
                     <td><?= $perfil['id_perfil']?></td>
                     <td><?= $perfil['nome']?></td>
-                </tr>"
+                </tr>
                 <?php
             }
             ?>

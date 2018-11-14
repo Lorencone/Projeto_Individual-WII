@@ -226,8 +226,8 @@ class Aluno
                           values ('$nome','$data_nascimento','$sexo','$telefone','$cpf','$turno','$cep',
                                   '$logradouro','$numero','$bairro','$localidade','$uf','$id_responsavel','$id_escola')";
 
-        print_r($sql);
-        die;
+//        print_r($sql);
+//        die;
 
         return $conexao->executar($sql);
     }
