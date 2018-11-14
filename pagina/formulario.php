@@ -39,7 +39,7 @@ include_once("../cabecalho.php");
             <div class="form-group">
                 <label for="id_perfil" class="col-sm-2 control-label">Perfil</label>
                 <div class="col-sm-10">
-                    <select class="form-control" id="id_perfil" name="id_perfil">
+                    <select class="form-control" id="id_perfil" name="id_perfil[]">
                         <option value="">Selecione</option>
                         <?php
                         foreach ($aperfil as $perfil) {
