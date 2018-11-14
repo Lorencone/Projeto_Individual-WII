@@ -2,6 +2,8 @@
 include_once ('../conexao/conectar.php');
 
 $pagina = new Pagina();
+$perfis = new Perfil();
+$aperfil = $perfis->recuperarDados();
 
 if(!empty($_GET['id_pagina'])){
     $pagina->carregarPorId($_GET['id_pagina']);
@@ -22,7 +24,7 @@ include_once("../cabecalho.php");
                 <div id="mensagemNome" role="alert"></div>
             </div>
             <div class="form-group">
-                <label for="caminho" class="col-sm-2 control-label">E-mail</label>
+                <label for="caminho" class="col-sm-2 control-label">Caminho</label>
                 <div class="col-sm-10">
                     <input type="caminho" class="form-control" id="caminho" name="caminho" value="<?= $pagina->getCaminho(); ?>">
                 </div>
@@ -32,6 +34,21 @@ include_once("../cabecalho.php");
                 <div class="col-sm-10">
                     <label class="radio-inline"><input required type="radio" name="publica" id="publica" value="1" <?= $pagina->getPublica() == "1" ? "checked" : '';?>>Sim</label>
                     <label class="radio-inline"><input required type="radio" name="publica" id="publica" value="0" <?= $pagina->getPublica() == "0" ? "checked" : '';?>>Não</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="id_perfil" class="col-sm-2 control-label">Perfil</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="id_perfil" name="id_perfil">
+                        <option value="">Selecione</option>
+                        <?php
+                        foreach ($aperfil as $perfil) {
+                            ?>
+                            <option value="<?= $perfil['id_perfil'];?>">
+                                <?= $perfil['nome']; ?>
+                            </option>
+                        <?php }?>
+                    </select>
                 </div>
             </div>
             <div class="form-group">

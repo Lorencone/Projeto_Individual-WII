@@ -30,7 +30,7 @@ $apaginas = $paginas->recuperarDados();
                     <td><?= $pagina['id_pagina']?></td>
                     <td><?= $pagina['nome']?></td>
                     <td><?= $pagina['publica']?></td>
-                </tr>"
+                </tr>
                 <?php
             }
             ?>
