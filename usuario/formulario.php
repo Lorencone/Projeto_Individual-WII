@@ -35,9 +35,9 @@ include_once("../cabecalho.php");
                 </div>
             </div>
             <div class="form-group">
-                <label for="senha class="col-sm-2 control-label">Senha</label>
+                <label for="senha" class="col-sm-2 control-label">Senha</label>
                 <div class="col-sm-10">
-                    <input type="email" class="form-control" id="senha" name="senha" value="<?= $usuario->getSenha(); ?>">
+                    <input type="password" class="form-control" id="senha" name="senha" value="<?= $usuario->getSenha(); ?>">
                 </div>
             </div>
             <div class="form-group">
