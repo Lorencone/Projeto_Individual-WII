@@ -192,7 +192,7 @@ class Usuario{
             }
         }
 
-        if (!empty($_SESSION['usuario']['id_usuario'])){
+        if (!empty($_SESSION['usuario']['id_perfil'])){
 
             $perfil = $_SESSION['usuario']['id_perfil'];
 
