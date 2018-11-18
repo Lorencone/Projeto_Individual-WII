@@ -91,8 +91,8 @@ class Pagina
 
         $this->vincularPerfil($id_pagina, $dados);
 
-        print_r($sql);
-        die;
+        //print_r($sql);
+        //die;
 
         return $id_pagina;
     }
@@ -133,8 +133,8 @@ class Pagina
                   publica = '$publica'
                 where id_pagina = '$id_pagina'";
 
-        print_r($sql);
-        die;
+        //print_r($sql);
+        //die;
 
         return $conexao->executar($sql);
     }
@@ -145,8 +145,8 @@ class Pagina
 
         $sql = "delete from pagina where id_pagina = '$id_pagina'";
 
-        print_r($sql);
-        die;
+        //print_r($sql);
+        //die;
 
         return $conexao->executar($sql);
     }

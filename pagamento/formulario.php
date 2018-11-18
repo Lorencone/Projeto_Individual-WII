@@ -76,7 +76,7 @@ include_once("../cabecalho.php");
                 <div class="col-sm-offset-2 col-sm-10">
                     <button type="submit" class="btn btn-success">Salvar</button>
                     <button type="reset" class="btn btn-info">Limpar</button>
-                    <a href="../pagamento/index.php#aluno" class="btn btn-danger">Voltar</a>
+                    <a href="../cadastro/index.php#aluno" class="btn btn-danger">Voltar</a>
                 </div>
             </div>
         </form>

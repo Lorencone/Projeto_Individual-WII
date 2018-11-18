@@ -5,7 +5,6 @@ class Usuario{
 
     protected $id_usuario;
     protected $nome;
-    protected $sexo;
     protected $email;
     protected $senha;
     protected $id_perfil;
@@ -28,16 +27,6 @@ class Usuario{
     public function setNome($nome)
     {
         $this->nome = $nome;
-    }
-
-    public function getSexo()
-    {
-        return $this->sexo;
-    }
-
-    public function setSexo($sexo)
-    {
-        $this->sexo = $sexo;
     }
 
     public function getEmail()
@@ -87,7 +76,6 @@ class Usuario{
 
         $this->id_usuario = $dados[0]['id_usuario'];
         $this->nome = $dados[0]['nome'];
-        $this->sexo = $dados[0]['sexo'];
         $this->email = $dados[0]['email'];
         $this->senha = $dados[0]['senha'];
         $this->id_perfil = $dados[0]['id_perfil'];
@@ -96,17 +84,16 @@ class Usuario{
     public function inserir($dados)
     {
         $nome = $dados['nome'];
-        $sexo = $dados['sexo'];
         $email = $dados['email'];
         $senha = $dados['senha'];
         $id_perfil = $dados['id_perfil'];
 
         $conexao = new Conexao();
-        $sql = "insert into usuario (nome, sexo, email, senha, id_perfil) 
-                values ('$nome', '$sexo','$email', '".md5($senha)."', '$id_perfil')";
+        $sql = "insert into usuario (nome, email, senha, id_perfil) 
+                values ('$nome','$email', '".md5($senha)."', '$id_perfil')";
 
-        print_r($sql);
-        die;
+        //print_r($sql);
+        //die;
         
         return $conexao->executar($sql);
     }
@@ -115,24 +102,22 @@ class Usuario{
     {
         $id_usuario = $dados['id_usuario'];
         $nome = $dados['nome'];
-        $sexo = $dados['sexo'];
         $email = $dados['email'];
         $senha = $dados['senha'];
-        $id_perfil = $dados['id_pais'];
+        $id_perfil = $dados['id_perfil'];
 
         $conexao = new Conexao();
 
         $sql = "update usuario set 
                 nome = '$nome' , 
-                sexo = '$sexo', 
                 email = '$email', 
                 senha = '".md5($senha)."', 
                 id_perfil = '$id_perfil'
 
                 WHERE id_usuario = '$id_usuario'";
         
-        print_r($sql);
-        die;
+        //print_r($sql);
+        //die;
         
         return $conexao->executar($sql);
     }
@@ -141,10 +126,10 @@ class Usuario{
     {
 
         $conexao = new Conexao();
-        $sql = "DELETE FROM usuario WHERE id_usuario = '$id_usuario'";
+        $sql = "DELETE FROM usuario WHERE id_usuario = $id_usuario";
         
-        print_r($sql);
-        die;
+        //print_r($sql);
+        //die;
         
         return $conexao->executar($sql);
     }

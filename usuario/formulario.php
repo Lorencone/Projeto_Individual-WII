@@ -2,6 +2,9 @@
 include_once ('../conexao/conectar.php');
 
 $usuario = new Usuario();
+$aperfil = new Perfil();
+
+$perfies = $aperfil->recuperarDados();
 
 if(!empty($_GET['id_usuario'])){
     $usuario->carregarPorId($_GET['id_usuario']);
@@ -20,13 +23,6 @@ include_once("../cabecalho.php");
                     <input type="text" class="form-control" id="nome" name="nome" value="<?= $usuario->getNome(); ?>">
                 </div>
                 <div id="mensagemNome" role="alert"></div>
-            </div>
-            <div class="form-group">
-                <label for="Sexo" class="col-sm-2 control-label">Sexo</label>
-                <div class="col-sm-10">
-                    <label class="radio-inline"><input required type="radio" name="sexo" id="sexo" value="M" <?= $usuario->getSexo() == "M" ? "checked" : '';?>>Masculino</label>
-                    <label class="radio-inline"><input required type="radio" name="sexo" id="sexo" value="F" <?= $usuario->getSexo() == "F" ? "checked" : '';?>>Feminino</label>
-                </div>
             </div>
             <div class="form-group">
                 <label for="email" class="col-sm-2 control-label">E-mail</label>
@@ -49,8 +45,6 @@ include_once("../cabecalho.php");
                         foreach ($perfies as $perfil) {
                             ?>
                             <option value="<?= $perfil['id_perfil'];?>" <?= ($usuario->getIdPerfil() == $perfil['id_perfil'])? "selected" : '';?> >
-                                <?= $perfil['id_perfil']; ?>
-                                <?= " - "; ?>
                                 <?= $perfil['nome']; ?>
                             </option>
                         <?php }?>

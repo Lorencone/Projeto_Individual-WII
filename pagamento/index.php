@@ -3,8 +3,10 @@ include_once ('../conexao/conectar.php');
 
 $pagamentos = new Pagamento();
 $contratante = new Contrato();
+$alunos = new Aluno();
 $pagamento = $pagamentos->recuperarDados();
 $contratos = $contratante->recuperarDados();
+$estudante = $alunos->recuperarDados();
 
 include_once ('../cabecalho.php');
 ?>
@@ -41,6 +43,13 @@ include_once ('../cabecalho.php');
                         foreach ($contratos as $contrato){ ?>
                             <?= ($row['id_contrato'] == $contrato['id_contrato'])? "{$contrato['numero']}" : '';?>
                         <?php } ?>
+                    </td>
+                    <td>
+                        <?php
+                        foreach ($contratos as $contrato){
+                            foreach ($estudante as $aluno){ ?>
+                                <?= ($contrato['id_aluno'] == $aluno['id_aluno'])? "{$aluno['nome']}" : '';?>
+                        <?php } }?>
                     </td>
                     <td><?= $row['valor'];?></td>
                     <td><?= $row['data_vencimento'];?></td>

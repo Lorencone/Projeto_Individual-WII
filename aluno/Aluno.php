@@ -221,13 +221,21 @@ class Aluno
 
         $conexao = new Conexao();
 
-        $sql = "insert into aluno (nome, data_nascimento, sexo, telefone, cpf, turno, cep, 
-                                  logradouro, bairro, localidade, uf, id_responsavel, id_escola) 
+        if($id_responsavel == ''){
+            $sql = "insert into aluno (nome, data_nascimento, sexo, telefone, cpf, turno, cep,
+                                      logradouro, numero, bairro, localidade, uf, id_escola) 
+                              values ('$nome','$data_nascimento','$sexo','$telefone','$cpf','$turno','$cep',
+                                      '$logradouro','$numero','$bairro','$localidade','$uf','$id_escola')";
+
+        }
+        else {
+            $sql = "insert into aluno (nome, data_nascimento, sexo, telefone, cpf, turno, cep,
+                                  logradouro, numero, bairro, localidade, uf, id_responsavel, id_escola) 
                           values ('$nome','$data_nascimento','$sexo','$telefone','$cpf','$turno','$cep',
                                   '$logradouro','$numero','$bairro','$localidade','$uf','$id_responsavel','$id_escola')";
-
-//        print_r($sql);
-//        die;
+        }
+        //print_r($sql);
+        //die;
 
         return $conexao->executar($sql);
     }
@@ -253,26 +261,45 @@ class Aluno
 
         $conexao = new Conexao();
 
-        $sql = "update aluno set
-                  nome = '$nome',
-                  data_nascimento = '$data_nascimento',
-                  sexo = '$sexo',
-                  telefone = '$telefone',
-                  cpf = '$cpf',
-                  turno = '$turno',
-                  cep = '$cep',
-                  logradouro = '$logradouro',
-                  numero = '$numero',
-                  bairro = '$bairro',
-                  localidade = '$localidade',
-                  uf = '$uf',
-                  id_responsavel = '$id_responsavel',
-                  id_escola = '$id_escola'
-                  
-                where id_aluno = $id_aluno";
-
-        print_r($sql);
-        die;
+        if($id_responsavel == ''){
+            $sql = "update aluno set
+                      nome = '$nome',
+                      data_nascimento = '$data_nascimento',
+                      sexo = '$sexo',
+                      telefone = '$telefone',
+                      cpf = '$cpf',
+                      turno = '$turno',
+                      cep = '$cep',
+                      logradouro = '$logradouro',
+                      numero = '$numero',
+                      bairro = '$bairro',
+                      localidade = '$localidade',
+                      uf = '$uf',
+                      id_escola = '$id_escola'
+                      
+                    where id_aluno = $id_aluno";
+        }
+        else{
+            $sql = "update aluno set
+                      nome = '$nome',
+                      data_nascimento = '$data_nascimento',
+                      sexo = '$sexo',
+                      telefone = '$telefone',
+                      cpf = '$cpf',
+                      turno = '$turno',
+                      cep = '$cep',
+                      logradouro = '$logradouro',
+                      numero = '$numero',
+                      bairro = '$bairro',
+                      localidade = '$localidade',
+                      uf = '$uf',
+                      id_responsavel = '$id_responsavel',
+                      id_escola = '$id_escola'
+                      
+                    where id_aluno = $id_aluno";
+        }
+        //print_r($sql);
+        //die;
 
         return $conexao->executar($sql);
     }
@@ -283,8 +310,8 @@ class Aluno
 
         $sql = "delete from aluno where id_aluno = $id_aluno";
 
-        print_r($sql);
-        die;
+        //print_r($sql);
+        //die;
 
         return $conexao->executar($sql);
     }

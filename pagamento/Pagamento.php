@@ -149,8 +149,8 @@ class Pagamento
                         '$parcelas','$valor_parcelado','$desconto','$id_contrato')";
 
 
-        print_r($sql);
-        die;
+        //print_r($sql);
+        //die;
 
         return $conexao->executar($sql);
     }
@@ -181,8 +181,8 @@ class Pagamento
                 where id_pagamento = $id_pagamento ";
 
 
-        print_r($sql);
-        die;
+        //print_r($sql);
+        //die;
 
         return $conexao->executar($sql);
     }
@@ -193,8 +193,8 @@ class Pagamento
 
         $sql = "delete from pagamento where id_pagamento = $id_pagamento";
 
-        print_r($sql);
-        die;
+        //print_r($sql);
+        //die;
 
         return $conexao->executar($sql);
     }

@@ -34,7 +34,7 @@ include_once ('../cabecalho.php');
                 <tr>
                     <td>
                         <a href="../contrato/formulario.php?id_contrato=<?= $row['id_contrato'];?>" class="btn btn-info">Alterar</a>
-                        <a href="../contrato/processamento.php?id_contrato=<?= $row['id_contrato'];?>" class="btn btn-danger">Excluir</a></td>
+                        <a href="../contrato/processamento.php?acao=excluir&id_contrato=<?= $row['id_contrato'];?>" class="btn btn-danger">Excluir</a></td>
                     <td><?= $row['id_contrato'];?></td>
                     <td><?= $row['numero'];?></td>
                     <td><?= $row['data_inicio'];?></td>

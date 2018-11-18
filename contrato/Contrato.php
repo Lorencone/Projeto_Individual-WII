@@ -104,8 +104,8 @@ class Contrato
         $sql = "INSERT INTO contrato (numero, data_inicio, data_termino, valor, id_aluno) 
                 VALUES ('$numero', '$data_inicio', '$data_termino', '$valor', '$id_aluno')";
 
-        print_r($sql);
-        die;
+        //print_r($sql);
+        //die;
 
         $conexao = new Conexao();
 
@@ -129,8 +129,8 @@ class Contrato
                 id_aluno = '$id_aluno' 
                 WHERE id_contrato = $id_contrato";
 
-        print_r($sql);
-        die;
+        //print_r($sql);
+        //die;
 
         $conexao = new Conexao();
         return $conexao->executar($sql);
@@ -141,8 +141,8 @@ class Contrato
         $sql = "DELETE FROM contrato WHERE id_contrato = $id_contrato";
         $conexao = new Conexao();
 
-        print_r($sql);
-        die;
+        //print_r($sql);
+        //die;
 
         return $conexao->executar($sql);
     }

@@ -93,8 +93,8 @@ class Perfil
 
         $sql = "delete from perfil where id_perfil = '$id_perfil'";
 
-        print_r($sql);
-        die;
+        //print_r($sql);
+        //die;
 
         return $conexao->executar($sql);
     }

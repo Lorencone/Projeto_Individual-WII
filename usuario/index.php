@@ -15,7 +15,6 @@ $ausuarios = $usuarios->recuperarDados();
                 <th>Ações</th>
                 <th>ID</th>
                 <th>Nome</th>
-                <th>Sexo</th>
             </tr>
             </thead>
             <?php
@@ -25,12 +24,11 @@ $ausuarios = $usuarios->recuperarDados();
             <tr>
                 <td>
                     <a href="../usuario/formulario.php?id_usuario=<?= $usuario['id_usuario']?>" class="btn btn-info">Alterar</a>
-                    <a href="../usuario/processamento.php?acao=exluir&id_usuario=<?= $usuario['id_usuario']?>" class="btn btn-danger">Excluir</a>
+                    <a href="../usuario/processamento.php?acao=excluir&id_usuario=<?= $usuario['id_usuario']?>" class="btn btn-danger">Excluir</a>
                 </td>
                 <td><?= $usuario['id_usuario']?></td>
                 <td><?= $usuario['nome']?></td>
-                <td><?= $usuario['sexo']?></td>
-            </tr>"
+            </tr>
             <?php
                 }
             ?>
