@@ -80,7 +80,7 @@ class Pagina
     {
         $nome = $dados['nome'];
         $caminho = $dados['caminho'];
-        $publica = empty($dados['publica']) ? 0 : 1;
+        $publica = $dados['publica'];
 
         $conexao = new Conexao();
 

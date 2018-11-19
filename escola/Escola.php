@@ -5,6 +5,7 @@ class Escola
 {
     protected $id_escola;
     protected $nome;
+    protected $imagem;
     protected $cep;
     protected $logradouro;
     protected $numero;
@@ -30,6 +31,16 @@ class Escola
     public function setNome($nome)
     {
         $this->nome = $nome;
+    }
+
+    public function getImagem()
+    {
+        return $this->imagem;
+    }
+
+    public function setImagem($imagem)
+    {
+        $this->imagem = $imagem;
     }
 
     public function getCep()
@@ -110,6 +121,7 @@ class Escola
 
         $this->id_escola = $dados[0]['id_escola'];
         $this->nome = $dados[0]['nome'];
+        $this->imagem = $dados[0]['imagem'];
         $this->cep = $dados[0]['cep'];
         $this->logradouro = $dados[0]['logradouro'];
         $this->numero = $dados[0]['numero'];
@@ -122,6 +134,7 @@ class Escola
     public function inserir($dados)
     {
         $nome = $dados['nome'];
+        $imagem = $_FILES['imagem']['name'];
         $cep = $dados['cep'];
         $logradouro = $dados['logradouro'];
         $numero = $dados['numero'];
@@ -131,8 +144,8 @@ class Escola
 
         $conexao = new Conexao();
 
-        $sql = "insert into escola (nome, cep, logradouro, numero, bairro, localidade, uf)
-                          values ('$nome','$cep','$logradouro','$numero','$bairro','$localidade','$uf')";
+        $sql = "insert into escola (nome, imagem, cep, logradouro, numero, bairro, localidade, uf)
+                          values ('$nome', '$imagem','$cep','$logradouro','$numero','$bairro','$localidade','$uf')";
 
 
 //        print_r($sql);
@@ -145,6 +158,7 @@ class Escola
     {
         $id_escola = $dados['id_escola'];
         $nome = $dados['nome'];
+        $imagem = $_FILES['imagem']['name'];
         $cep = $dados['cep'];
         $logradouro = $dados['logradouro'];
         $numero = $dados['numero'];
@@ -157,6 +171,7 @@ class Escola
 
         $sql = "update escola set
                   nome = '$nome',
+                  imagem = '$imagem',
                   cep = '$cep',
                   logradouro = '$logradouro',
                   numero = '$numero',
@@ -193,6 +208,16 @@ class Escola
         $dados = $conexao->recuperar($sql);
 
         return $dados[0]['qtd'];
+    }
+
+    public function uploadFoto()
+    {
+        if ($_FILES['imagem']['erro'] == UPLOAD_ERR_OK){
+            $origem = $_FILES['imagem']['tmp_name'];
+            $destino = '../upload/escola/' . $_FILES['imagem']['name'];
+
+            move_uploaded_file($origem, $destino);
+        }
     }
 
 }
