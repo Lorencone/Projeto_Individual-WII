@@ -1198,7 +1198,7 @@
     </column>
     <column id="288" parent="247" name="numero">
       <Position>6</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>varchar(15)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="289" parent="247" name="bairro">

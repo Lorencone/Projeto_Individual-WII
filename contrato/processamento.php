@@ -27,7 +27,7 @@ switch ($_GET['acao']){
         $existe = $contrato->existeNumero($_GET['numero']);
 
         if ($existe){
-            echo "<div class='alert' style='background: #2093ee; color: #ffffff'><h3 class='text-center'>Já existe {$existe} contrato com o número de {$_GET['numero']}, informe outra.</h3></div>";
+            echo "<div class='alert' style='background: #ffffff; color: #000000'><h3 class='text-center'>Já existe {$existe} contrato com o número de {$_GET['numero']}, informe outra.</h3></div>";
         }
         die;
         break;
