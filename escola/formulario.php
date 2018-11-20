@@ -12,7 +12,7 @@ include_once("../cabecalho.php");
     <div class="container" style="margin-top: 60px;">
         <h1>Escola</h1>
         <br/>
-        <form method="post" action="processamento.php?acao=salvar" class="form-horizontal">
+        <form method="post" action="processamento.php?acao=salvar" class="form-horizontal" enctype="multipart/form-data">
             <input type="hidden" name="id_escola" value="<?= $escola->getIdEscola(); ?>">
             <div class="form-group">
                 <label for="nome" class="col-sm-2 control-label">Nome</label>
@@ -58,10 +58,16 @@ include_once("../cabecalho.php");
                 </div>
             </div>
             <div class="form-group">
+                <label for="imagem" class="col-sm-2 control-label">Imagem</label>
+                <div class="col-sm-10">
+                    <input type="file" class="form-control" id="imagem" name="imagem" value="<?= $escola->getImagem(); ?>">
+                </div>
+            </div>
+            <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
                     <button type="submit" class="btn btn-success">Salvar</button>
                     <button type="reset" class="btn btn-info">Limpar</button>
-                    <a href="../cadastro/index.php#escola" class="btn btn-danger">Voltar</a>
+                    <a href="index.php" class="btn btn-danger">Voltar</a>
                 </div>
             </div>
         </form>

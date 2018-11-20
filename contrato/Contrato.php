@@ -157,4 +157,13 @@ class Contrato
         return $dados[0]['qtd'];
     }
 
+    public function pagamento($id_contrato)
+    {
+        $conexao = new Conexao();
+
+        $sql = "SELECT * FROM contrato WHERE id_contrato = '$id_contrato'";
+        $dados = $conexao->recuperar($sql);
+
+        return $dados[0]['valor'];
+    }
 }

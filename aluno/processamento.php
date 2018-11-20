@@ -33,4 +33,4 @@ switch ($_GET['acao']){
 
 }
 
-header('location: ../cadastro/index.php#aluno');
+header('location: index.php');

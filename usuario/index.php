@@ -2,6 +2,7 @@
 include_once ('../conexao/conectar.php');
 $usuarios = new Usuario();
 $ausuarios = $usuarios->recuperarDados();
+include_once '../cabecalho.php';
 ?>
     <div class="container" style="margin-top: 60px;">
         <h2>Usuario</h2>

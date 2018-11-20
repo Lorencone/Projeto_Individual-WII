@@ -38,4 +38,4 @@ switch ($_GET['acao']){
 
 }
 
-header('location: ../cadastro/index.php#responsavel');
+header('location: index.php');

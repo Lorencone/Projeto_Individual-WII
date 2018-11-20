@@ -34,4 +34,4 @@ switch ($_GET['acao']){
 
 }
 
-header('location: ../cadastro/index.php#contrato');
+header('location: index.php');
