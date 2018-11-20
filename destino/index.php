@@ -8,7 +8,7 @@ include_once '../cabecalho.php';
 ?>
 
 <div class="container">
-    <h1>Categorias dos Filmes</h1>
+    <h1>Escolas</h1>
     <div class="row">
         <div class="col-md-4 col-xs-6">
             <?php foreach ($escolas as $escola) {?>

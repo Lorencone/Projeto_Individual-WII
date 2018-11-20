@@ -142,6 +142,8 @@ class Escola
         $localidade = $dados['localidade'];
         $uf = $dados['uf'];
 
+        $this->uploadFoto();
+
         $conexao = new Conexao();
 
         $sql = "insert into escola (nome, imagem, cep, logradouro, numero, bairro, localidade, uf)
@@ -166,6 +168,7 @@ class Escola
         $localidade = $dados['localidade'];
         $uf = $dados['uf'];
 
+        $this->uploadFoto();
 
         $conexao = new Conexao();
 
