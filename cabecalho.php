@@ -63,8 +63,8 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="../cadastro/index.php">Home</a></li>
-                <li><a href="../cadastro/index.php">Escolas</a></li>
+                <li><a href="../destino/index.php">Home</a></li>
+                <li><a href="../destino/index.php">Escolas</a></li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Cadastro<span class="caret"></span></a>
