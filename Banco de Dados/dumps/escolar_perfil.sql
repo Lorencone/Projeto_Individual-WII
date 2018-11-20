@@ -28,7 +28,7 @@ CREATE TABLE `perfil` (
   `id_perfil` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(45) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id_perfil`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,6 +37,7 @@ CREATE TABLE `perfil` (
 
 LOCK TABLES `perfil` WRITE;
 /*!40000 ALTER TABLE `perfil` DISABLE KEYS */;
+INSERT INTO `perfil` VALUES (1,'Usuario'),(2,'Editor'),(3,'Administrador');
 /*!40000 ALTER TABLE `perfil` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-04 22:15:55
+-- Dump completed on 2018-11-20 11:26:35

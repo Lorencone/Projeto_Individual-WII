@@ -30,7 +30,7 @@ CREATE TABLE `pagina` (
   `caminho` varchar(50) COLLATE utf8_bin NOT NULL,
   `publica` int(11) NOT NULL,
   PRIMARY KEY (`id_pagina`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,6 +39,7 @@ CREATE TABLE `pagina` (
 
 LOCK TABLES `pagina` WRITE;
 /*!40000 ALTER TABLE `pagina` DISABLE KEYS */;
+INSERT INTO `pagina` VALUES (1,'Usuario','usuario/index.php',0),(2,'Login','usuario/login.php',1),(3,'Pagina','pagina /index.php',0),(4,'Formulario_Pagina','pagina/formulario.php',0);
 /*!40000 ALTER TABLE `pagina` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-04 22:15:55
+-- Dump completed on 2018-11-20 11:26:36

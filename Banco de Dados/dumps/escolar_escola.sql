@@ -27,14 +27,15 @@ DROP TABLE IF EXISTS `escola`;
 CREATE TABLE `escola` (
   `id_escola` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) COLLATE utf8_bin NOT NULL,
+  `imagem` varchar(45) COLLATE utf8_bin NOT NULL,
   `cep` int(11) NOT NULL,
   `logradouro` varchar(200) COLLATE utf8_bin NOT NULL,
-  `numero` int(11) NOT NULL,
+  `numero` varchar(15) COLLATE utf8_bin DEFAULT NULL,
   `bairro` varchar(100) COLLATE utf8_bin NOT NULL,
   `localidade` varchar(50) COLLATE utf8_bin NOT NULL,
   `uf` varchar(15) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id_escola`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,6 +44,7 @@ CREATE TABLE `escola` (
 
 LOCK TABLES `escola` WRITE;
 /*!40000 ALTER TABLE `escola` DISABLE KEYS */;
+INSERT INTO `escola` VALUES (1,'IESB Oeste','iesboeste.jpg',72225315,'QNN 31 Área Especial E','0','Ceilândia Norte (Ceilândia)','Brasília','DF'),(2,'UniCEUB - Taguatinga','uniceub.jpg',72025120,'QSE 12','1/17','Taguatinga Sul (Taguatinga)','Brasília','DF');
 /*!40000 ALTER TABLE `escola` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-04 22:15:55
+-- Dump completed on 2018-11-20 11:26:35

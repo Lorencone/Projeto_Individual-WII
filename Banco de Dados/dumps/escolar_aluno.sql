@@ -29,8 +29,8 @@ CREATE TABLE `aluno` (
   `nome` varchar(200) COLLATE utf8_bin NOT NULL,
   `data_nascimento` date NOT NULL,
   `sexo` char(1) COLLATE utf8_bin NOT NULL,
-  `telefone` int(11) DEFAULT NULL,
-  `cpf` int(11) DEFAULT NULL,
+  `telefone` varchar(15) COLLATE utf8_bin DEFAULT NULL,
+  `cpf` varchar(15) COLLATE utf8_bin DEFAULT NULL,
   `turno` char(1) COLLATE utf8_bin NOT NULL,
   `cep` int(11) NOT NULL,
   `logradouro` varchar(200) COLLATE utf8_bin NOT NULL,
@@ -66,4 +66,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-04 22:15:55
+-- Dump completed on 2018-11-20 11:26:36
