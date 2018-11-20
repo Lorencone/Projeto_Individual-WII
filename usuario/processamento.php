@@ -26,17 +26,17 @@ switch ($_GET['acao']) {
 
     case 'logar':
         $usuario->logar($_POST);
-        //if (!empty($_SESSION['usuario'])) {
-        //    switch ($_SESSION['usuario']['id_perfil']) {
-        //        case Perfil::PERFIL_ADMINISTRADOR:
-        //            header('location: usuario/index.php');
-        //        case Perfil::PERFIL_EDITOR:
-        //            header('location: ../escola/index.php');
-        //        case Perfil::PERFIL_USUARIO:
-        //            header('location: ../responsavel/index.php');
-        //    }
-        //}
-        header('location: index.php');
+        if (!empty($_SESSION['usuario'])) {
+
+            switch ($_SESSION['usuario']['id_perfil']) {
+                case Perfil::PERFIL_ADMINISTRADOR:
+                    header('location: ../pagina/index.php');
+                case Perfil::PERFIL_EDITOR:
+                    header('location: ../escola/index.php');
+                case Perfil::PERFIL_USUARIO:
+                    header('location: ../destino/index.php');
+            }
+        }
         die;
         break;
     case 'deslogar':
