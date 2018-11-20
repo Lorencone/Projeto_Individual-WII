@@ -192,13 +192,13 @@ class Usuario{
             }
         }
 
-        if (!empty($_SESSION['usuario']['id_perfil'])){
+        if (!empty($_SESSION['usuario']['id_usuario'])){
 
             $perfil = $_SESSION['usuario']['id_perfil'];
 
             $sql = "select * from permissao pe
                       inner join pagina pa on pa.id_pagina = pe.id_pagina
-                    where id_perfil = $perfil";
+                    where id_perfil = '$perfil'";
 
             $paginas = $conexao->recuperar($sql);
 
