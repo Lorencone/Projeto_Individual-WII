@@ -107,14 +107,18 @@ include_once("../rodape.php");
         });
 
     });
+//    $('#parcelas').change(function () {
+//
+//        $.ajax({
+//            url: 'processamento.php?acao=parcelado&' + $('#parcelas').serialize() + $('#valor').serialize(),
+//            success: function (resultado) {
+//                $('#valor_parcelado').val(resultado);
+//            }
+//        });
+//
+//    });
     $('#parcelas').change(function () {
-
-        $.ajax({
-            url: 'processamento.php?acao=parcelado&' + $('#parcelas').serialize() + $('#valor').serialize(),
-            success: function (resultado) {
-                $('#valor_parcelado').val(resultado);
-            }
-        });
-
-    });
+        valorParcelado = $('#valor').val() / $('#parcelas').val();
+        $('#valor_parcelado').val(valorParcelado)
+    })
 </script>

@@ -138,6 +138,7 @@ include_once('../cabecalho.php');
 include_once("../location/viacep.php");
 include_once("../rodape.php");
 ?>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script>
     // AJAX para verificação do nome
     $('#nome').change(function () {
@@ -151,6 +152,25 @@ include_once("../rodape.php");
 
         // Verificação em JQUERY Load
         // $('#mensagemNome').load('processamento.php?acao=verificar_nome&nome=' + $('#nome').val());
+
+    });
+</script>
+<script>
+    $(document).ready(function () {
+
+        // Telefone
+        var maskBehavior = function (val) {
+                return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+            },
+            options = {
+                onKeyPress: function (val, e, field, options) {
+                    field.mask(maskBehavior.apply({}, arguments), options);
+                }
+            };
+        $('#telefone').mask(maskBehavior, options);
+
+        // CPF
+        $('#cpf').mask('000.000.000-00', {reverse: true});
 
     });
 </script>

@@ -1,2 +1,2 @@
 <?php
-header('location: cadastro/index.php');
+header('location: destino/index.php');

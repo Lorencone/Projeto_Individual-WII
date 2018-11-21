@@ -16,3 +16,5 @@ include_once ('../perfil/Perfil.php');
 include_once ('../pagina/Pagina.php');
 //Conecta com o banco de dados de Usuario
 include_once ('../usuario/Usuario.php');
+//Conecta com o banco de dados de Usuario
+include_once '../cabecalho.php';

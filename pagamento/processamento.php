@@ -18,13 +18,8 @@ switch ($_GET['acao']){
         $pagamento->excluir($_GET['id_pagamento']);
         break;
     case 'buscarvalor':
-        $contrato->pagamento($_GET['id_pagamento']);
-        break;
-    case 'parcelado':
-        $parcelas = $_GET['parcelas'];
-        $valor = $_GET['valor'];
-        $resultado = $valor / $parcelas;
-        return $resultado;
+        echo $contrato->pagamento($_GET['id_contrato']);
+        die;
         break;
 }
 
